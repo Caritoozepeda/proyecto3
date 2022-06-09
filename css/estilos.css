@@ -20,7 +20,7 @@ body{
     font-family: 'Satisfy', cursive;
    }  
 
-   /*.ir-arriba {
+   .ir-arriba {
     position: fixed;
     bottom: 100px;
     right: -100%;
@@ -48,7 +48,7 @@ body{
 }
 
 
-/** Skew **/
+* Skew *
 .skew-abajo{
     position: absolute;
 	bottom: 0;
@@ -65,7 +65,7 @@ body{
 	border-style: solid;
 	border-color: #fff transparent transparent transparent;
 	z-index: 10;
-}*/
+}
 
    /*-----Menu de navegacion----*/
 
