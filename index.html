@@ -19,7 +19,7 @@
 </head>
 <body>
 	<!-- Ir Arriba -->
-  <div class="ir-arriba">
+  <div class="go-top">
     <span class="fas fa-angle-up"></span>
   </div>
 
@@ -36,12 +36,12 @@
 		<div class="list-container">
 			<ul class="lists">
 				<li><a href="#" class="activo"> Inicio </a></li>
-				<li><a href="#" class="activo"> Viajar sola </a></li>
-				<li><a href="#" class="activo"> Viajar en familia </a></li>
-				<li><a href="#" class="activo"> Destinos mas buscados </a></li>
-				<li><a href="#" class="activo"> Contacto </a></li>
+				<li><a href="#" > Viajar sola </a></li>
+				<li><a href="#" > Viajar en familia </a></li>
+				<li><a href="#" > Destinos mas buscados </a></li>
+				<li><a href="#" > Contacto </a></li>
 				
-			</ul>
+			</ul>	
 		</div>
 	</nav>
 	<!-- imagenes del header -->
@@ -50,7 +50,7 @@
 		<h1>El placer de viajar</h1>
 		<hr>
 			<p>Conocé los diferentes destinos </p>
-		<button id="continuar">Continuar</button>////
+			<!-- <button id="abajo">Ver abajo</button> //// -->
 	</div>
 </div>
 <div class="skew-abajo"></div>	
@@ -73,7 +73,7 @@
 					
 
 				</div>
-				<div class="mas-info"><button> Mas Info</button></div>
+				<div class="mas-info"><button>Mas Info</button></div> <!-- agregarle enlacce pagina externa -->
 				 
 				
 			</div>
@@ -83,6 +83,8 @@
 		<section class="destinos">
 			 <div class="skew-arriba"></div>
 			<div class="deg-background"></div>
+
+
 			<div class="ejeZproyect">
 				<div class="container-destinos">
 					<div class="destinos-titulo">
@@ -99,8 +101,8 @@
 					<img src="img/Montenegro.jpg" alt="">
 					</div>
 					<div class="skew-abajo"></div>
-				</div>
-			</div>
+			 </div>  
+		 </div>  
 			
 
 		</section>
@@ -122,22 +124,28 @@
 			</div>
 
 			<div class="tarj-viaje">
+
+				<div class="tarj-img"><img src="img/viaje sola.jpg" alt=""></div>	
+				<div class="titulo-tarj"><h4>Viajar solas</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing.</p></div>
+			</div>
+
+			<div class="tarj-viaje">
 			<div class="tarj-img">
 				<img src="img/vaca-en-familias.jpg" alt=""></div>	
 				<div class="titulo-tarj"><h4>Vacaciones en familia</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing.</p></div>
 				</div>
-				
-
-			<div class="tarj-viaje">
+		<div class="tarj-viaje">
 				<div class="tarj-img"><img src="img/viajar_a_europa.jpg" alt=""></div>	
-				<div class="titulo-tarj"><h4>¿Cúal es la mejor época para viajar a Europa?</h4>
+				<div class="titulo-tarj"><h4>Viajar a Europa</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing.</p></div>
 
 				</div>
 		</div>
+		<div class="skew-arriba"></div>
 		</section>
-
+ 
 	</main>
 	<!-- Footer -->
  <footer class="footer">
@@ -151,36 +159,33 @@
      <hr>
    </div>
 
-   <div class="formulario">
-     <form id="form">
-        <label for="user">Nombre:</label>
-        <input type="text" id="user" name="user" placeholder="Ingresa tu Nombre">
+ 	 <div class="formulario-content">
+
+   <form id="formulario" action="#" name="datos"  method="get" enctype="text/plain">
+     
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu Nombre">
    
-        <label for="email">Correo Electronico:</label>
-        <input type="email" id="email" name="email" placeholder="Ingresa tu Correo Electronico">
+        <label for="mail">Correo Electronico:</label>
+        <input type="email" id="mail" name="mail" placeholder="Ingresa tu Correo Electronico" onblur="validarEmail(document.datos.mail.value)">
    
         <label for="message">Escribe tu mensaje</label>
         <textarea name="menssage" id="message"></textarea>
-   
-        <div class="enviar"><button>Enviar</button></div>
+   		
+        <div class="enviar"> <button type="submit" name="enviar" value="enviar" onclick="validar()">Enviar </div> 
+        	
    
         <div class="mensaje-form">
           <p>¿No te pierdas las últimas novedades!</p>
         </div>
      </form>
    </div>
-				
-			<div class="footer-texto">
-				<p>&copy: Tu compañera de viaje - 2022 | Todos los derechos reservados</p>
-				
+				<div class="footer-texto">
+				<p>&copy; Tu compañera de viaje - 2022 | Todos los derechos reservados</p>
 			</div>
-
 			</div>
 		</div>
-		
-
-	</footer>
-
+		</footer>
 
 	<!-- script -->
 	<script src="https://kit.fontawesome.com/27e45cbb1b.js" crossorigin="anonymous"></script>
