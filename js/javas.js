@@ -2,10 +2,11 @@
 /*.....................*validacion*.....................*/
 
 
-function validarEmail(mail) {
+function validarEmail() {
 
 
-      var mail=document.datos.mail.value;
+     /* var mail=document.formulario.mail.value;*/
+      var mail= document.getElementById('mail').value;
       
           var exReg=/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
           var esValido=exReg.test(mail);
@@ -13,30 +14,105 @@ function validarEmail(mail) {
          if (!esValido){
            alert("La dirección de email es incorrecta");
            return false;
-           document.datos.mail.focus();
+           document.formulario.mail.focus();
            
-         } 
+         } return esValido;
         }
 
-function validar(){        
-      var nombre= document.datos.nombre; 
-      if(nombre.value.trim()=="" || nombre.value.trim().length>30 || (!isNaN(nombre.value.trim()))){
-            alert("Ingrese un nombre valido");
-            
-            return false;
-            nombre.focus();
-          }
-          if(confirm("Desea enviar los datos")){
-                alert("Gracias por enviar el formulario");
 
-              }else 
-              return false;
-              document.datos.reset();
 
-                 }
+function validar(){   
+
+
+
+var b=false;
+//paaso 1
+    if (document.formulario.nombre.value.trim()=="" || (!isNaN(document.formulario.nombre.value.trim()))) 
+    {
+        alert("Ingrese un nombre valido");
+        return false;
+        document.formulario.nombre.focus();
+        b=true;
+
+    }else{ //paso 2
+           if (document.getElementById('mail').value=="") {
+                alert('Por favor, ingrese un email');
+                return false;
+                b=true;
+
+            }else{
+              //paso 3
+                    if(document.getElementById('mail').value!=""){
+
+                     validarEmail();
+
+                          //paso 4
+
+                          if(validarEmail()){
+                            //paso 5
+                              if (document.formulario.menssage.value.trim()=="") {
+                              alert('Por favor, ingrese un comentario');
+                              return false ; document.formulario.menssage.focus();  
+                              b=true;
+                              }else{
+                                var boton =document.formulario.enviar.value;
+                              boton.disabled = false;
+
+                                      if(confirm("Desea enviar los datos"))
+
+                                      {
+                                      alert("Gracias por enviar el formulario");
+
+                                      }
+                                      else
+                              {return false;
+                                document.formulario.reset();
+
+                              } 
+                          }document.formulario.reset();
+                           }
+                         }   
+                      }
+                    }
+                }
+
+
+ 
+ 
+
+
+//Imagenes 
+  var indice = 1;
+mostrarFoto(indice);
+
+// Next/previous controls
+function navegarFoto(n) {
+  mostrarFoto(indice += n);
+}
+
+// Thumbnail image controls
+function fotoActual(n) {
+  mostrarFoto(indice = n);
+}
+
+function mostrarFoto(n) {
+  var i;
+  var fotos = document.getElementsByClassName("foto");
+  var circulos = document.getElementsByClassName("circulo");
+  if (n > fotos.length) {indice = 1}
+  if (n < 1) {indice = fotos.length}
+  for (i = 0; i < fotos.length; i++) {
+      fotos[i].style.display = "none";
+  }
+  for (i = 0; i < circulos.length; i++) {
+      circulos[i].className = circulos[i].className.replace(" active", "");
+  }
+  fotos[indice-1].style.display = "block";
+  circulos[indice-1].className += " active";
+}
 /* menu*/
 
-/*let btnMenu = document.querySelector('.btn-menu');
+let btnMenu = document.querySelector('.btn-menu');
 let barIconX = document.querySelector('.btn-menu i');
 let menu = document.querySelector('.list-container');
 let menuContent = document.querySelector('.menu');
@@ -61,8 +137,9 @@ btnMenu.addEventListener('click', (event) => {
    }
 
 });
-*/
+
 // Add class "active"
+
 let enlaces = document.querySelectorAll('.lists li a');
 
 enlaces.forEach((element) => {
@@ -77,8 +154,9 @@ enlaces.forEach((element) => {
 
 });
 
+
 //Scroll Efect
-/*
+
  let prevScrollPos = window.pageYOffset;
  let goTop = document.querySelector('.ir-arriba');
 
@@ -126,4 +204,4 @@ abajo.addEventListener('click', () => {
   document.body.scrollTop = 600;
   document.documentElement.scrollTop = 600;
   
-});*/
+});
