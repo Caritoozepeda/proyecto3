@@ -1,11 +1,11 @@
 :root{
-	--red:#D82148; /*variables*/
+	--red:#A25B5B; /*variables*/
 	--black:#141E27;
 	--blue:#151D3B;
 	--white:#DADBBD;
 	--green:#6EBF8B;
 	--titulo:35px;
-   --texto:14px;
+   --texto:26px;
    --subtitulos:30px;
 }
 
@@ -17,10 +17,8 @@
 body{
 	background: #fff;
 font-family: 'Dancing Script', cursive;
-/*font-family: 'Indie Flower', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Satisfy', cursive;*/
-font-family: 'Tajawal', sans-serif;
+font-family: 'Satisfy', cursive;
+
    } 
    h3{
     font-size:30px;
@@ -29,7 +27,20 @@ font-family: 'Tajawal', sans-serif;
    } 
 /*carrousel*/
 
+.info-container .carousel{
 
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.info-container .carousel  #imagen{
+    width: 1000px;
+    height: 600px;
+    background-size: cover;
+
+}
 .acerca-imagenes  {
   max-width: 750px;
   position: relative;
@@ -40,28 +51,24 @@ font-family: 'Tajawal', sans-serif;
             margin: 0 auto;
             display: flex;
         }
-
-
-
- 
-
-        /*buttons */
-  #retroceder  button{
+ /*buttons */
+ .info-container  .carousel   #retroceder {
   cursor: pointer;
   position: absolute;
  /* top: 50%;*/
   width: auto;
   /*margin-top: -22px;*/
   padding: 16px;
-  
+  margin-top: 300px;
+  /*margin-left: 750px;*/
   font-weight: bold;
   font-size: 18px;
   transition: 0.8s ease;
   border-radius: 50px;
   user-select: none;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.3);
 }
- #avanzar button{
+.info-container .carousel   #avanzar {
   cursor: pointer;
   position: absolute;
  /* top: 50%;*/
@@ -69,72 +76,52 @@ font-family: 'Tajawal', sans-serif;
   margin-left: 10%;
   /*margin-top:-22px;*/
   padding: 16px;
- 
+ margin-top: 300px;
+ margin-left: 750px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: var(--texto);
   transition: 0.8s ease;
   border-radius: 50px;
   user-select: none;
- background-color: rgba(0,0,0,0.8);
+ background-color: rgba(0,0,0,0.3);
  }
-.controles button {
- 
+.info-container .controles button {
+ width: 20px;
   align-content: center;
   color: #A25B5B;
-  border-radius: 3.5px; 
+  border-radius: 35px; 
   margin-bottom: 0;
   margin-top: 20px;
 }
 
-.controles button:hover{
+.info-container .controles button:hover{
   align-content: center;
   color: #809A6F;
   border-radius: 3.5px;
 }
-  #retroceder:hover,  #avanzar:hover {
+.info-container .carousel  #retroceder:hover,  #avanzar:hover {
   color:#dddd;
   transition: background-color 0.6s ease;
+   border-radius: 350px; 
 
 }
 
 .controles #play{
- margin-left: 50%;
+    width:40px; 
+    height:40px;
+ margin-left: 45%;
 
 }
 
 .controles #stop{
    margin-right: 40%;
+   width:40px; 
+    height:40px;
 }
 
 
 
-   .go-top {
-    position: fixed;
-    bottom: 100px;
-    right: -100%;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border:2px solid var(--red);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 1000;
-    transition: 0.5s;
-}
-.go-top:hover{
-    background: var(--green);
-    color:#fff;
-    border: 2px solid var(--white);
-}
-.go-top:hover span{color:var(--white);
-}
-
-.go-top > span{
-   font-size: 30px;
-   color: var(--black);
-}
+  
 
 
 /* ..................Skew ..................*/
@@ -204,30 +191,30 @@ font-family: 'Tajawal', sans-serif;
     color: var(--black);
     border-radius: 24px;
     transition: 0.3s;
-    font-size: 20px;
+    font-size: var(--texto);
 }
 /*se quita list*/
 /*.menu .list-container .lists{
 	display: flex;
 
-}
-se quita list
-.menu .list-container .lists li{
+}*/
+/**/
+/*.menu .list-container .lists li{
 	list-style: none;
 
-}
+}*/
 
 /*se quita list*/
 /*.menu .list-container .lists li a{
 	text-decoration: none;
 	margin:0px 10px;
-	padding: 8px;/*8*/
-/*	color:var(--black);
+	padding: 8px;8
+	color:var(--black);
 	border-radius: 24px;
 	font-size: 16px;
 	transition: 0.3s;
-}
-*/*/
+}*/
+
 .menu .list-container ul li a.activo{
     background: var(--red);
     color:#fff;
@@ -239,8 +226,19 @@ se quita list
 
 .btn-menu > .fa-bars{
 	display: none;
-}
-
+}/*
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position:absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 28px;
+        color: var(--black);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+*/
 
 
 
@@ -287,34 +285,58 @@ se quita list
     margin-top: 5px;
 }
 .img-header .viajar p{
-    font-size: 20px;
+    font-size: var(--texto);
     color: #fff;
     margin-top: 20px;
 }
 /**/
-.img-header .viajar > button{
+.img-header .viajar >  button  {
     width: 170px;
     height: 40px;
     background: var(--red);
     border-radius: 24px;
     border:none;
     outline: none;
-    font-size: 22px;
+    font-size: var(--texto);
     color: #fff;
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
     transition: 0.5s;
+    text-decoration: none;
 }
 .img-header .viajar > button:hover{
     background:var(--blue);
 }
+.img-header .viajar  button a {  
+    text-decoration: none;
+    list-style: none
+}
+
+.img-header .viajar > button:hover{
+    background:var(--blue);
+}
+
+
+
+/*
+@media only screen and (max-width:773px ){
+    .img-header .viajar h1{font-size: 40px;}
+    .img-header .viajar > button{width: 130px; font-size: 20px;}
+}
+@media only screen and (max-width:590px){
+    .img-header .viajar h1{font-size: 30px;}
+    .img-header .viajar hr{width: 100px;}
+    .img-header .viajar p{font-size: 17px;}
+    .img-header .viajar > button{width: 100px; font-size: 17px;}
+}*/
 
 /*----------acerca-de----------*/
 
 .acerca-de{
     width: 100%;
     margin-top: 120px;
+
 }
 .acerca-de .info-container{
     width: 80%;
@@ -322,6 +344,7 @@ se quita list
     display: flex;
     justify-content: center;
     flex-direction: column;
+
 }
 .acerca-de .info-container h1{
     font-size: 50px;
@@ -330,9 +353,26 @@ se quita list
     text-align: center;
     margin-bottom: 20px;
 }
+
+.acerca-de .info-container .titulo h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 100px;
+}
+.acerca-de .info-container h2{
+    font-size: 33px;
+    font-weight: normal;
+    color: var(--blue);
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 40px;
+ 
+
+ }
 .acerca-de .info-container p{
     text-align: center;
-    font-size: 20px;
+    font-size: var(--texto);
     color: var(--black);
     line-height: 35px;
     margin:10px 0px;
@@ -341,15 +381,17 @@ se quita list
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 50px 0px;
+    margin: 80px 0px;
+     margin-left: 10%;
 }
 .acerca-de .info-container .acerca-imagenes img{
     width: calc(60% - 10px);
-    height: 600px;
-    margin: 10px 10px;
+    height: 500px;
+    margin: 10px 10px ;
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
+     justify-content: center;
     
 }
 .acerca-de .info-container .mas-info{
@@ -362,7 +404,7 @@ se quita list
     height: 40px;
     text-align: center;
     line-height: 40px;
-    font-size: 20px;
+    font-size: var(--texto);
     background: var(--green);
     border: none;
     outline: none;
@@ -378,8 +420,16 @@ se quita list
 .acerca-de .info-container .mas-info #enlace a{
 
 
-    }
-
+    }/*
+     @media only screen and (max-width:773px){
+   .acerca-de .info-container .acerca-imagenes{flex-direction: column;}
+    .acerca-de .info-container .acerca-imagenes img{width: 100%;}
+}
+@media only screen and (max-width:590px){
+    .acerca-de .info-container h1{font-size: 30px;}
+    .acerca-de .info-container p{font-size: 15px;}
+}
+*/
 
 /** destinos **/
 .destinos{
@@ -391,6 +441,8 @@ se quita list
     background-position: center;
     background-size: cover;
     margin-top: 100px;
+
+
 }
 .destinos .deg-background{
     position:absolute;
@@ -406,21 +458,23 @@ se quita list
     height: 100%;
 }
 .destinos .container-destinos{
-    width: 90%;
+    width: 95%;
     margin:auto;
     padding-top: 100px;
 }
 .destinos .container-destinos .destinos-titulo {
     border:2px solid #fff;
-    padding:10px;
+    padding:100px;
     text-align: center;
-    width: 50%;
+    width: 70%;
     margin: auto;
+    margin-bottom: 100px;
 }
 .destinos .container-destinos .destinos-titulo h2{
     font-size: 40px;
     color: #fff;
     font-weight: normal;
+    margin-bottom: 100px;
 }
 .destinos .container-destinos .destinos-titulo  hr{
    background:#fff;
@@ -443,6 +497,14 @@ se quita list
   border-radius: 10px;
   cursor: pointer; /**/
 }
+/*
+@media only screen and (max-width:773px){
+    .destinos .container-destinos .destino-img img{width: 80%; margin-bottom: 30px;}
+}
+@media only screen and (max-width:446px){
+   .destinos .container-destinos .destinos-titulo h2{font-size: 30px;}
+}
+*/
 /*TIps-recomendaciones.........*/
 
 
@@ -475,6 +537,11 @@ se quita list
     margin:auto;
     background: var(--black);
 }
+
+/*****/
+.recomendaciones .recomendaciones-titulo{
+    
+}
 .recomendaciones .box-recomendaciones{
     width: 90%;
     margin: 80px auto;
@@ -497,9 +564,9 @@ se quita list
 
 
 .recomendaciones .box-recomendaciones .tarj-viaje .tarj-img img{
-    width: 150px;
-    height: 150px;
-    border-radius: 10%;/**/
+    width: 45px;
+    height: 40px;
+   /* border-radius: 80%;*/
     object-fit: cover;
     cursor: pointer;
 }
@@ -568,6 +635,14 @@ se quita list
 .recomendaciones .box-recomendaciones .tarj-viaje .titulo-tarj:hover h4{
     color: var(--green);
 }
+/*
+@media only screen and (max-width:890px){
+    .recomendaciones .box-recomendaciones .tarj-viaje .tarj-img img{width: 200px; height: 200px;}
+    .recomendaciones .box-recomendaciones .tarj-viaje{width: 100%;}
+    .recomendaciones .box-recomendaciones .tarj-viaje .titulo-tarj h4{font-size: 25px;}
+    .recomendaciones .box-recomendaciones .tarj-viaje .titulo-tarj p{font-size: 17px; line-height: 35px;}
+}
+*/
 
 /** .....Footer.......... **/
 .footer{
@@ -713,17 +788,20 @@ se quita list
     color: #fff;
 }
 
-.carousel{
 
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-
+/*
+@media only screen and (max-width:900px){
+    .footer .formulario-content{width: 85%; padding:20px;}
+    .footer .formulario-content #formulario input{width: 100%;}
+    .footer .formulario-content #formulario textarea{width: 100%;}
 }
-
-#imagen{
-    width: 400px;
-    height: 400px;
-    background-size: cover;
-
+@media only screen and (max-width:590px){
+    .footer .formulario-content{width: 95%; padding:20px;}
+    .footer .formulario-content #formulario label{font-size: 17px;}
+    .footer .formulario-content #formulario input{width: 100%; font-size: 17px;}
+    .footer .formulario-content #formulario textarea{width: 100%;}
+    .footer .formulario-content #formulario .mensaje-form p{font-size: 17px;}
+    .footer .footer-texto{width: 100%; padding: 0px 30px;}
+    .footer .footer-texto p{font-size: 17px;}
 }
+*/

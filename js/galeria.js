@@ -7,9 +7,19 @@
                 '../proyecto3/img/roma-italia.jpg',
                 '../proyecto3/img/tahiti-francia.jpg',
                 '../proyecto3/img/bora-bora.jpg',
-                '../proyecto3/img/bora-bora.jpg'
-
-
+                '../proyecto3/img/tai.jpg',
+                '../proyecto3/img/lugares-para-visitar-en-Canada.jpg',
+                '../proyecto3/img/slider1.jpg',
+                '../proyecto3/img/slider2.jpg',
+                '../proyecto3/img/slider3.jpg',
+                '../proyecto3/img/japon.jpg',
+                '../proyecto3/img/italia.jpg',
+                '../proyecto3/img/pascuas.jpg',
+                '../proyecto3/img/roma.jpg',
+                '../proyecto3/img/solas/portada1.jpg',
+                '../proyecto3/img/solas/fondo3.jpg',
+                '../proyecto3/img/fort.jpg'
+               
 
             ];
             const TIEMPO_INTERVALO_MILESIMAS_SEG = 1000;

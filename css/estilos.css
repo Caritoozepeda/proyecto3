@@ -102,7 +102,8 @@ body{
 
 
     }
-.menu .list-container{margin-right: 20px;}
+.menu .list-container{margin-right: 20px;
+}
 .menu .list-container ul{display: flex;
 }
 .menu .list-container ul li{list-style: none;
@@ -119,27 +120,36 @@ body{
     font-size: 20px;
 }
 /*se quita list*/
-/*.menu .list-container .lists{
-	display: flex;
+/*
+.menu .list-container .lists{
+    width: 100%;
+    height: 100%;
+    display: flex;
+     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top:4px solid var(--red);
+
 
 }
-se quita list
+
+
 .menu .list-container .lists li{
 	list-style: none;
 
-}
+}*/
 
 /*se quita list*/
 /*.menu .list-container .lists li a{
 	text-decoration: none;
 	margin:0px 10px;
-	padding: 8px;/*8*/
-/*	color:var(--black);
+	padding: 8px;8
+	color:var(--black);
 	border-radius: 24px;
 	font-size: 16px;
 	transition: 0.3s;
-}
-*/*/
+}*/
+
 .menu .list-container ul li a.activo{
     background: var(--red);
     color:#fff;
@@ -152,6 +162,36 @@ se quita list
 .btn-menu > .fa-bars{
 	display: none;
 }
+
+/*    
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position:absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 28px;
+        color: var(--black);
+        transition: 0.5s;
+        cursor: pointer;
+    } 
+ .btn-menu > .fa-times{
+    color: var(--red);
+}*/
+    .btn-menu > .fa-bars:hover{
+        color:var(--red);
+    }
+    .menu .logo-box{
+        margin-left: 30px;
+    }
+    /*.menu .list-container{
+        position: fixed;
+        top:60px;
+        left:-100%;
+        background:#fff;
+        width: 100%;
+        height: calc(100vh - 60px);
+    }*/
 
 
 
@@ -217,10 +257,31 @@ se quita list
     margin-top: 20px;
     cursor: pointer;
     transition: 0.5s;
+    text-decoration: none;
+    list-style: none
+
 }
+.img-header .viajar > button a{
+    text-decoration: none;
+    list-style: none
+}
+
 .img-header .viajar > button:hover{
     background:var(--blue);
 }
+/*
+@media only screen and (max-width:773px ){
+    .img-header .viajar h1{font-size: 40px;}
+    .img-header .viajar > button{width: 130px; font-size: 20px;}
+}
+@media only screen and (max-width:590px){
+    .img-header .viajar h1{font-size: 30px;}
+    .img-header .viajar hr{width: 100px;}
+    .img-header .viajar p{font-size: 17px;}
+    .img-header .viajar > button{width: 100px; font-size: 17px;}
+}
+*/
+
 
 /*----------acerca-de----------*/
 
@@ -242,6 +303,13 @@ se quita list
     text-align: center;
     margin-bottom: 20px;
 }
+.acerca-de .info-container h2{
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--black);
+    margin-bottom: 10px;
+     text-align: center;
+}
 .acerca-de .info-container p{
     text-align: center;
     font-size: 30px;
@@ -256,8 +324,8 @@ se quita list
     margin: 50px 0px;
 }
 .acerca-de .info-container .acerca-imagenes img{
-    width: calc(70% - 10px);
-    height: 600px;
+    width: calc(50% - 10px);
+    height: 400px;
     margin: 10px 10px;
     object-fit: cover;
     border-radius: 10px;
@@ -281,6 +349,8 @@ se quita list
     color: #fff;
     cursor: pointer;
     transition: 0.5s;
+    text-decoration: none;
+
 }
 .acerca-de .info-container .mas-info button:hover{
 	background: var(--blue);
@@ -289,13 +359,19 @@ se quita list
 
 
     }
-/*vereeeeeeeeeeeerrrrrrrrrr*/
-    .acerca-de .info-container .mas-info #subt h2{
-    font-size: 50px;
-    font-weight: normal;
-    color: var(--black);
-    margin-bottom: 10px;
+    /*
+    @media only screen and (max-width:773px){
+   .acerca-de .info-container .acerca-imagenes{flex-direction: column;}
+    .acerca-de .info-container .acerca-imagenes img{width: 100%;}
 }
+@media only screen and (max-width:590px){
+    .acerca-de .info-container h1{font-size: 30px;}
+    .acerca-de .info-container p{font-size: 15px;}
+}
+*/
+
+
+
 /** destinos **/
 .destinos{
     position: relative;
@@ -327,7 +403,7 @@ se quita list
 }
 .destinos .container-destinos .destinos-titulo {
     border:2px solid #fff;
-    padding:10px;
+    padding:100px;
     text-align: center;
     width: 50%;
     margin: auto;
@@ -358,7 +434,15 @@ se quita list
   border-radius: 10px;
   cursor: pointer; /**/
 }
+/*
+@media only screen and (max-width:773px){
+    .destinos .container-destinos .destino-img img{width: 80%; margin-bottom: 30px;}
+}
+@media only screen and (max-width:446px){
+   .destinos .container-destinos .destinos-titulo h2{font-size: 30px;}
+}
 
+*/
 
 /** recomendaciones para leer **/
 .recomendaciones{
@@ -381,6 +465,31 @@ se quita list
     height: 2px;
     margin:auto;
     background: var(--black);
+}
+
+.recomendaciones .recomendaciones-titulo button{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    background: var(--red);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none; 
+
+}
+
+.recomendaciones .recomendaciones-titulo button a{
+     text-decoration: none; 
+      color: #fff;
+}
+.recomendaciones .recomendaciones-titulo button:hover{
+    background: var(--blue);
 }
 .recomendaciones .box-recomendaciones{
     width: 90%;
@@ -443,6 +552,14 @@ se quita list
 .recomendaciones .box-recomendaciones .tarj-viaje .titulo-tarj:hover h4{
     color: var(--blue);
 }
+/*
+@media only screen and (max-width:890px){
+    .recomendaciones .box-recomendaciones .tarj-viaje .tarj-img img{width: 200px; height: 200px;}
+    .recomendaciones .box-recomendaciones .tarj-viaje{width: 100%;}
+    .recomendaciones .box-recomendaciones .tarj-viaje .titulo-tarj h4{font-size: 25px;}
+    .recomendaciones .box-recomendaciones .tarj-viaje .titulo-tarj p{font-size: 17px; line-height: 35px;}
+}
+*/
 
 /** .....Footer.......... **/
 .footer{
@@ -587,3 +704,20 @@ se quita list
     text-align: center;
     color: #fff;
 }
+/*
+@media only screen and (max-width:900px){
+    .footer .formulario-content{width: 85%; padding:20px;}
+    .footer .formulario-content #formulario input{width: 100%;}
+    .footer .formulario-content #formulario textarea{width: 100%;}
+}
+@media only screen and (max-width:590px){
+    .footer .formulario-content{width: 95%; padding:20px;}
+    .footer .formulario-content #formulario label{font-size: 17px;}
+    .footer .formulario-content #formulario input{width: 100%; font-size: 17px;}
+    .footer .formulario-content #formulario textarea{width: 100%;}
+    .footer .formulario-content #formulario .mensaje-form p{font-size: 17px;}
+    .footer .footer-texto{width: 100%; padding: 0px 30px;}
+    .footer .footer-texto p{font-size: 17px;}
+}
+*/
+
